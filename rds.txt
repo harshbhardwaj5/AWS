@@ -28,7 +28,7 @@ mycursor.execute("SHOW TABLES")
    85  ls
    86  yum install httpd -y
    87  wget  https://raw.githubusercontent.com/redashu/dbconnect/master/mysqldump/myfile.sql
-   138   mysql -u  admin -h  database-1.cnhy3vu6qi61.ap-south-1.rds.amazonaws.com -p  hello  <  myfile.sql
+   138   mysql -u  admin -h  endpoint -p  hello  <  myfile.sql
   139   mysql -u  admin -h  endpoint -p
  get into sql
     
