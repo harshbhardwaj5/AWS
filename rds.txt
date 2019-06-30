@@ -5,11 +5,22 @@ vi file.py
 for python ------------------
 ----->#!/usr/bin/python3
 import mysql.connector my sql
-u="root"
-p="pass"
-python  file.py
-db='adhoc'
-h=' server of db'
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  passwd="yourpassword"
+)
+
+mycursor = mydb.cursor()
+mycursor.execute("SHOW DATABASES")
+
+mycursor.execute("CREATE DATABASE mydatabase")
+
+mycursor.execute("CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))")
+
+
+mycursor.execute("SHOW TABLES")
+
 -----------------------------using normal method-----------------
 
   83 mysql -u  root -h endpoint   -p
